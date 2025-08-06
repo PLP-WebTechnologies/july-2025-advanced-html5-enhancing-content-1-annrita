@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CHAN Football Fan Portal - Stay updated with the latest football news, match schedules, and player information."
+    />
+    <title>Assignment: Enhancing HTML5 Content & Mastering Forms</title>
+  </head>
+  <body>
+    <header>
+      <h1>CHAN Football Fan Portal</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Football Glossary</h2>
+        <dl>
+          <dt>Goalkeeper</dt>
+          <dd>
+            The player who guards the goal and is the only one allowed to use
+            their hands within the penalty area.
+          </dd>
+
+          <dt>Offside</dt>
+          <dd>
+            A rule violation that occurs when an attacking player is ahead of
+            the last defender when the ball is played to them.
+          </dd>
+
+          <dt>Hat-trick</dt>
+          <dd>When a player scores three goals in a single match.</dd>
+
+          <dt>Penalty Kick</dt>
+          <dd>
+            A free shot at goal from the penalty spot, awarded after a foul in
+            the penalty area.
+          </dd>
+
+          <dt>Corner Kick</dt>
+          <dd>
+            A kick from the corner of the field awarded when the ball crosses
+            the goal line last touched by a defender.
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Football Team Positions</h2>
+        <ol type="1">
+          <li>Goalkeeper</li>
+          <li>
+            Defenders
+            <ol type="a">
+              <li>Center Back</li>
+              <li>Full Back</li>
+              <li>Wing Back</li>
+            </ol>
+          </li>
+          <li>
+            Midfielders
+            <ol type="i">
+              <li>Central Midfielder</li>
+              <li>Defensive Midfielder</li>
+              <li>Attacking Midfielder</li>
+            </ol>
+          </li>
+          <li>
+            Forwards
+            <ul type="circle">
+              <li>Striker</li>
+              <li>Second Striker</li>
+              <li>Winger</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Football Pitch</h2>
+        <img
+          src="images/pc 2.png"
+          alt="Picture of a football and field"
+          width="350"
+          height="400"
+        />
+      </section>
+
+      <section>
+        <h2>Goal Highlights (Video)</h2>
+        <video width="350" height="400" controls>
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section>
+        <h2>Match Commentary (Audio)</h2>
+        <audio controls loop>
+          <source src="" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </section>
+
+      <section>
+        <h2>CHAN 2024 Group Stage Results</h2>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Date</th>
+              <th>Score</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kenya vs DRC Congo</td>
+              <td>2025-08-03</td>
+              <td>1 - 0</td>
+              <td>Kasarani Stadium</td>
+            </tr>
+            <tr>
+              <td>Morocco vs Angola</td>
+              <td>2025-08-03</td>
+              <td>2 - 0</td>
+              <td>Nyayo Stadium</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Sign Up for CHAN Match Alerts</h2>
+        <form action="/submit" method="post" autocomplete="on">
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name:</label><br />
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              required
+              minlength="3"
+              placeholder="e.g. Paula Juan Stones"
+            /><br /><br />
+
+            <label for="email">Email Address:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="e.g. you@example.com"
+            /><br /><br />
+
+            <label for="phone">Phone Number:</label><br />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              pattern="[0-9]{10}"
+              placeholder="e.g. 0712345678"
+            /><br /><br />
+
+            <label for="birthdate">Date of Birth:</label><br />
+            <input
+              type="date"
+              id="birthdate"
+              name="birthdate"
+              required
+            /><br /><br />
+          </fieldset>
+
+          <fieldset>
+            <legend>Match Preferences</legend>
+
+            <label for="team">Favorite African Team:</label><br />
+            <input
+              type="text"
+              id="team"
+              name="team"
+              list="teams"
+              placeholder="e.g. Kenya"
+            /><br />
+            <datalist id="teams">
+              <option value="Kenya" />
+              <option value="DRC Congo" />
+              <option value="Morocco" />
+              <option value="Algeria" />
+              <option value="Senegal" /></datalist
+            ><br />
+
+            <label>Subscribe to matchday alerts?</label><br />
+            <input
+              type="radio"
+              id="yes"
+              name="subscribe"
+              value="yes"
+              required
+            />
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="subscribe" value="no" />
+            <label for="no">No</label><br /><br />
+
+            <label for="stadium">Preferred Stadium:</label><br />
+            <select id="stadium" name="stadium" required>
+              <option value="">--Select Stadium--</option>
+              <option value="Nyayo">Nyayo Stadium</option>
+              <option value="Kasarani">Kasarani Stadium</option>
+              <option value="Marrakech">Marrakech Stadium</option>
+              <option value="Dakar">Dakar Arena</option></select
+            ><br /><br />
+          </fieldset>
+
+          <fieldset>
+            <legend>Security</legend>
+
+            <label for="password">Create Password:</label><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+              maxlength="20"
+              placeholder="WQ1FvnIg56d@90"
+            /><br /><br />
+
+            <label for="token">Referral Code:</label><br />
+            <input
+              type="text"
+              id="token"
+              name="token"
+              value="CHAN2025"
+              readonly
+            /><br /><br />
+          </fieldset>
+
+          <button type="submit" value="Sign Up">Sign Up</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 CHAN Football Fan Hub. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
